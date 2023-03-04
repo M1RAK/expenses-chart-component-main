@@ -18,7 +18,7 @@ function displayData(){
         <span class="bar-amount">
         <small>$${bar.amount}</small>
       </span>
-        <div class="bar-line" style='height:${bar.amount * 2.2}px'></div>
+        <div class="bar-line" style='height:${bar.amount * 3}px'></div>
         <div class="bar-date">
          <p>${bar.day}</p>
         </div>`
