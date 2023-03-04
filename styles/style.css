@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM sans", Helvetica, sans-serif;
+}
+
+:root {
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+  --fs-700:1.8rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--Cream);
+}
+
+.container {
+  width: 30rem;
+  height: 36rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.2rem;
+  background-color: var(--Soft-red);
+  color: var(--Cream);
+  border-radius: 12px;
+}
+.header h2 {
+  font-size: var(--fs-700);
+}
+.header .rings {
+  display: flex;
+  justify-content: center;
+}
+.header .rings .ring {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.header .rings .ring--light {
+  border: 3px solid var(--Cream);
+  position: relative;
+  left: 1.2rem;
+}
+.header .rings .ring--dark {
+  background-color: var(--Dark-brown);
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  background-color: var(--Very-pale-orange);
+  border-radius: 9px;
+  padding: 1rem;
+}
+
+.chart__title {
+  margin: 1rem 0;
+}
+.chart__title h2 {
+  font-size: var(--fs-700);
+}
+
+.chart__bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.chart__bars .bar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.chart__bars .bar .bar-amount {
+  margin: 0.3rem 0;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  height: 2.2rem;
+  width: 3.2rem;
+  background-color: var(--Dark-brown);
+  border-radius: 5px;
+}
+.chart__bars .bar .bar-amount p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.chart__bars .bar .bar-line {
+  width: 2.75rem;
+  border-radius: 5px;
+  background-color: var(--Soft-red);
+}
+.chart__bars .bar .bar-date {
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+.bar:hover > .bar-amount {
+  display: flex;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.total-container .total-summary h2 {
+  font-size: 2.2rem;
+  margin: 0.3rem 0;
+}
+.total-container .total-summary p {
+  color: var(--Medium-brown);
+}
+.total-container .total-percentage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0.3rem;
+}
+.total-container .total-percentage h3 {
+  font-size: 1.5rem;
+}
+.total-container .total-percentage p {
+  margin: 0.3rem 0;
+  color: var(--Medium-brown);
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 70%, 48%);
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: auto;
+  }
+  .chart-container {
+    padding: 0;
+  }
+  .chart__bars {
+    padding: 0;
+    gap: 0;
+  }
+  .chart__bars .bar .bar-line {
+    width: 2.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .chart__title h2 {
+    font-size: 1.5rem;
+  }
+  .total-container .total-summary h2 {
+    font-size: 1.65rem;
+  }
+  .total-container .total-percentage h3 {
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=style.css.map */
