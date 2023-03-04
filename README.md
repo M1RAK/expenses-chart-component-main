@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-[Live Site](https://www.expenses-chart-component-master.netlify.app)
+[Live Site](https://expenses-chart-component-master.netlify.app/)
 
 ### Built with
 
